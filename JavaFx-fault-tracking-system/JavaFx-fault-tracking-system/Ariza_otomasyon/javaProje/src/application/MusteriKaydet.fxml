@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="526.0" prefWidth="393.0" style="-fx-background-color: OldLace;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MusteriKaydetController">
+   <children>
+      <Label layoutX="67.0" layoutY="151.0" text="Adı">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="67.0" layoutY="203.0" text="Soyadı">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="67.0" layoutY="258.0" text="E-Mail">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="67.0" layoutY="320.0" text="Telefon">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txt_adi" layoutX="159.0" layoutY="147.0" style="-fx-background-color: PapayaWhip;" />
+      <TextField fx:id="txt_soy" layoutX="159.0" layoutY="199.0" style="-fx-background-color: PapayaWhip;" />
+      <TextField fx:id="txt_mail" layoutX="160.0" layoutY="254.0" style="-fx-background-color: PapayaWhip;" />
+      <TextField fx:id="txt_telefon" layoutX="161.0" layoutY="316.0" style="-fx-background-color: PapayaWhip;" />
+      <Label layoutX="67.0" layoutY="375.0" text="T.C">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txt_tc" layoutX="161.0" layoutY="371.0" style="-fx-background-color: PapayaWhip;" />
+      <RadioButton fx:id="radio1_evt" layoutX="198.0" layoutY="424.0" mnemonicParsing="false" text="Evet">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="radio2_hyr" layoutX="258.0" layoutY="424.0" mnemonicParsing="false" text="Hayır">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></RadioButton>
+      <Label layoutX="39.0" layoutY="424.0" text="Eskiden bizimle çalıştı mı?">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Button fx:id="btn_kaydet" layoutX="177.0" layoutY="455.0" mnemonicParsing="false" onAction="#btn_kydt_click" prefHeight="56.0" prefWidth="117.0" style="-fx-background-color: NavajoWhite;" text="KAYDET">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <ImageView fitHeight="138.0" fitWidth="146.0" layoutX="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../OneDrive/Masaüstü/müsteri.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_kapat" layoutX="344.0" mnemonicParsing="false" onAction="#btn_kapat1" prefHeight="26.0" prefWidth="42.0" style="-fx-background-color: OldLace;">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../OneDrive/Masaüstü/kapat.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btn_geri" layoutX="287.0" layoutY="2.0" mnemonicParsing="false" onAction="#btn_geri1" prefHeight="26.0" prefWidth="34.0" style="-fx-background-color: OldLace;">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../OneDrive/Masaüstü/geri.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

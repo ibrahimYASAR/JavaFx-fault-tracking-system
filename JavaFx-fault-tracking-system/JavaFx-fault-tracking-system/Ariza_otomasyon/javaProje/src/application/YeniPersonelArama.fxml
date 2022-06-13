@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.YeniPersonelAramaController">
+   <children>
+      <SplitPane dividerPositions="0.3062533404596472" layoutX="249.0" layoutY="163.0" prefHeight="500.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="223.0" style="-fx-background-color: OldLace;">
+               <children>
+                  <TextField fx:id="txt_arama" layoutX="3.0" layoutY="89.0" onAction="#txt_arama_action" onKeyPressed="#txt_arama_keyPressed" prefHeight="26.0" prefWidth="214.0" promptText="Aranacak Metin Veya Kullanıcı" style="-fx-background-color: PapayaWhip;">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></TextField>
+                  <DatePicker fx:id="DateBaslangic" layoutX="75.0" layoutY="164.0" prefHeight="26.0" prefWidth="136.0" showWeekNumbers="true" style="-fx-background-color: PapayaWhip;" />
+                  <DatePicker fx:id="DateBitis" layoutX="75.0" layoutY="224.0" prefHeight="26.0" prefWidth="136.0" style="-fx-background-color: PapayaWhip;" />
+                  <Label layoutX="7.0" layoutY="168.0" text="Başlangıç:" />
+                  <Label layoutX="21.0" layoutY="228.0" text="Bitiş:" />
+                  <Button fx:id="Btn_Sorgula" layoutX="91.0" layoutY="266.0" mnemonicParsing="false" onAction="#Btn_sorgula_click" prefHeight="44.0" prefWidth="120.0" style="-fx-background-color: NavajoWhite;" text="Sorgula">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <ImageView fitHeight="260.0" fitWidth="256.0" layoutX="1.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../OneDrive/Masaüstü/arma.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btn_kapat" layoutX="-3.0" mnemonicParsing="false" onAction="#btn_kapat1" prefHeight="26.0" prefWidth="42.0" style="-fx-background-color: OldLace;">
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../OneDrive/Masaüstü/kapat.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_geri" layoutX="46.0" layoutY="1.0" mnemonicParsing="false" onAction="#btn_geri1" prefHeight="26.0" prefWidth="34.0" style="-fx-background-color: OldLace;">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../OneDrive/Masaüstü/geri.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="474.0">
+               <children>
+                  <TableView fx:id="tablepersonel" onMouseClicked="#table_clicked" prefHeight="498.0" prefWidth="517.0" style="-fx-background-color: OldLace;">
+                     <columns>
+                        <TableColumn fx:id="perid" prefWidth="25.599991619586945" style="-fx-background-color: NavajoWhite;" text="id" />
+                        <TableColumn fx:id="perad" prefWidth="134.40002059936523" style="-fx-background-color: NavajoWhite;" text="Ad-Soyad" />
+                        <TableColumn fx:id="peralan" prefWidth="104.00001525878906" style="-fx-background-color: NavajoWhite;" text="Alan" />
+                        <TableColumn fx:id="peradres" prefWidth="112.800048828125" style="-fx-background-color: NavajoWhite;" text="Adres" />
+                        <TableColumn fx:id="permaas" prefWidth="48.79998779296875" style="-fx-background-color: NavajoWhite;" text="Maas" />
+                        <TableColumn fx:id="pertarih" maxWidth="253.60000000000002" prefWidth="92.0" style="-fx-background-color: NavajoWhite;" text="Başlama Tarihi" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

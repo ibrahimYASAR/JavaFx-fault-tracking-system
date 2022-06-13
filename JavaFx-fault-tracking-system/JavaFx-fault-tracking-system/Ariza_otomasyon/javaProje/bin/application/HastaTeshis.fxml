@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ComboSehir" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="1044.0" style="-fx-background-color: OldLace;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HastaTeshisController">
+   <children>
+      <Button fx:id="BtnEkle" layoutX="344.0" layoutY="66.0" mnemonicParsing="false" onAction="#BtnEkleClick" prefHeight="42.0" prefWidth="144.0" style="-fx-background-color: NavajoWhite;" text="EKLE" textFill="#09d006">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="BtnSil" layoutX="344.0" layoutY="119.0" mnemonicParsing="false" onAction="#BtnSilClick" prefHeight="42.0" prefWidth="144.0" style="-fx-background-color: NavajoWhite;" text="SİL" textFill="#eb0101">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="BtnGüncelle" layoutX="344.0" layoutY="173.0" mnemonicParsing="false" onAction="#BtnGüncelleClick" prefHeight="42.0" prefWidth="144.0" style="-fx-background-color: NavajoWhite;" text="GÜNCELLE" textFill="#9e751f">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="BtnSorgula" layoutX="344.0" layoutY="226.0" mnemonicParsing="false" onAction="#BtnSorgulaClick" prefHeight="42.0" prefWidth="144.0" style="-fx-background-color: NavajoWhite;" text="SORGULA" textFill="#655c5c">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Label layoutX="157.0" layoutY="4.0" text="PERSONEL HASTALIK TESHİŞ" textFill="#23a0c4">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+      <Label layoutX="7.0" layoutY="73.0" style="-fx-background-color: PapayaWhip;" text="Hasta Ad Soyad:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="TxtAdSoyad" layoutX="144.0" layoutY="69.0" prefHeight="6.0" prefWidth="192.0" style="-fx-background-color: PapayaWhip;">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></TextField>
+      <Slider fx:id="SldAtes" layoutX="144.0" layoutY="364.0" max="43.7" min="21.0" prefHeight="14.0" prefWidth="149.0" style="-fx-background-color: PapayaWhip;" />
+      <Label layoutX="20.0" layoutY="358.0" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: PapayaWhip;" text="Hasta Ateşi:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="ComboBox" layoutX="144.0" layoutY="117.0" onAction="#MemleketSec" prefWidth="150.0" promptText="Şehir Seçiniz" style="-fx-background-color: PapayaWhip;" />
+      <CheckBox fx:id="checkteshis" layoutX="142.0" layoutY="313.0" mnemonicParsing="false" onAction="#checkteshis_click" style="-fx-background-color: PapayaWhip;" text="Negatif" />
+      <Label layoutX="20.0" layoutY="308.0" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: PapayaWhip;" text="Covid Testi:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="142.0" layoutY="263.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="54.0" style="-fx-background-color: PapayaWhip;" text="Kadın">
+         <toggleGroup>
+            <ToggleGroup fx:id="Cinsiyet" />
+         </toggleGroup></RadioButton>
+      <RadioButton layoutX="220.0" layoutY="263.0" mnemonicParsing="false" style="-fx-background-color: PapayaWhip;" text="Erkek" toggleGroup="$Cinsiyet" />
+      <Label layoutX="36.0" layoutY="258.0" style="-fx-background-color: PapayaWhip;" text="Cinsiyet:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="166.0" style="-fx-background-color: PapayaWhip;" text="Meslek:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="141.0" layoutY="171.0" mnemonicParsing="false" style="-fx-background-color: PapayaWhip;" text="elektrik">
+         <toggleGroup>
+            <ToggleGroup fx:id="Meslek" />
+         </toggleGroup></RadioButton>
+      <RadioButton layoutX="219.0" layoutY="171.0" mnemonicParsing="false" style="-fx-background-color: PapayaWhip;" text="beyaz eşya" toggleGroup="$Meslek" />
+      <RadioButton layoutX="141.0" layoutY="203.0" mnemonicParsing="false" style="-fx-background-color: PapayaWhip;" text="klima" toggleGroup="$Meslek" />
+      <RadioButton layoutX="217.0" layoutY="203.0" mnemonicParsing="false" style="-fx-background-color: PapayaWhip;" text="yazılım" toggleGroup="$Meslek" />
+      <Label layoutX="30.0" layoutY="116.0" style="-fx-background-color: PapayaWhip;" text="Memleket:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblates" layoutX="301.0" layoutY="313.0" prefHeight="17.0" prefWidth="29.0" />
+      <Label fx:id="lbltarih" layoutX="36.0" layoutY="435.0" style="-fx-background-color: PapayaWhip;" text="Tarih:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dp1" layoutX="124.0" layoutY="410.0" onAction="#ShowDate" showWeekNumbers="true" style="-fx-background-color: PapayaWhip;" />
+      <PieChart fx:id="pieGrafik" layoutX="624.0" layoutY="315.0" onMouseClicked="#pieGrafik" prefHeight="176.0" prefWidth="289.0" style="-fx-background-color: NavajoWhite;" />
+      <BarChart fx:id="barGrafik" layoutX="635.0" layoutY="58.0" onMouseClicked="#GrafikClick" prefHeight="218.0" prefWidth="308.0" style="-fx-background-color: NavajoWhite;">
+        <xAxis>
+          <CategoryAxis fx:id="grafikSehir" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="grafiky" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <DatePicker fx:id="dt2" layoutX="124.0" layoutY="460.0" showWeekNumbers="true" style="-fx-background-color: PapayaWhip;" />
+      <Label fx:id="lbltıkla" layoutX="701.0" layoutY="50.0" text="Grafiğe Tıklayınız" textFill="#eb0808" />
+      <TableView fx:id="TblHastaBilgileri" layoutX="45.0" layoutY="365.0" prefHeight="188.0" prefWidth="943.0" style="-fx-background-color: OldLace;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="tblhastaadi" prefWidth="153.59997254610062" style="-fx-background-color: NavajoWhite;" text="Hasta Adı Soyadı" />
+            <TableColumn fx:id="tblmemleket" minWidth="0.0" prefWidth="121.60005187988281" style="-fx-background-color: NavajoWhite;" text="Memleket" />
+            <TableColumn fx:id="tblmeslek" prefWidth="156.0" style="-fx-background-color: NavajoWhite;" text="Meslek" />
+            <TableColumn fx:id="tblcinsiyet" prefWidth="155.99996948242188" style="-fx-background-color: NavajoWhite;" text="Cinsiyet" />
+            <TableColumn fx:id="tblates" prefWidth="151.20001220703125" style="-fx-background-color: NavajoWhite;" text="Ateş" />
+            <TableColumn fx:id="tblteshis" prefWidth="139.20001220703125" style="-fx-background-color: NavajoWhite;" text="Teşhis" />
+            <TableColumn fx:id="tbltarih" prefWidth="163.20001220703125" style="-fx-background-color: NavajoWhite;" text="Tarih" />
+            <TableColumn prefWidth="11.199951171875" style="-fx-background-color: NavajoWhite;" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_kapat" layoutX="77.0" layoutY="14.0" mnemonicParsing="false" onAction="#btn_kapat1" prefHeight="39.0" prefWidth="71.0" style="-fx-background-color: OldLace;">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../OneDrive/Masaüstü/kapat.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btn_geri" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#btn_geri1" prefHeight="39.0" prefWidth="42.0" style="-fx-background-color: OldLace;">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../OneDrive/Masaüstü/geri.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AtolyeDurumGuncelleController">
+   <children>
+      <SplitPane dividerPositions="0.24549399198931907" layoutX="295.0" layoutY="113.0" prefHeight="650.0" prefWidth="850.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <SplitPane dividerPositions="0.702469135802469" layoutY="108.0" orientation="VERTICAL" prefHeight="649.6" prefWidth="207.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: OldLace;">
+                           <children>
+                              <Label layoutX="22.0" layoutY="3.0" text="id">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="14.0" layoutY="27.0" text="Adı:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="1.0" layoutY="45.0" text="Soyadı:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="11.0" layoutY="369.0" text="Ariza Açıklama">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="15.0" layoutY="85.0" text="Alet">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="14.0" layoutY="138.0" text="Masraf">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="15.0" layoutY="193.0" text="Ürün Bilgi">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="2.0" layoutY="263.0" text="Personel Açıklama">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label fx:id="lbl_id" layoutX="66.0" layoutY="3.0" text="Label">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label fx:id="lbl_adi" layoutX="66.0" layoutY="27.0" text="Label">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label fx:id="lbl_soyadi" layoutX="66.0" layoutY="45.0" text="Label">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <TextField fx:id="txt_alet" layoutX="82.0" layoutY="81.0" prefHeight="26.0" prefWidth="196.0" style="-fx-background-color: PapayaWhip;">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></TextField>
+                              <TextField fx:id="txt_masraf" layoutX="82.0" layoutY="134.0" prefHeight="26.0" prefWidth="196.0" style="-fx-background-color: PapayaWhip;">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></TextField>
+                              <TextField fx:id="txt_urunBilgi" layoutX="83.0" layoutY="189.0" prefHeight="26.0" prefWidth="196.0" style="-fx-background-color: PapayaWhip;">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></TextField>
+                              <TextArea fx:id="txt_personelAciklama" layoutX="106.0" layoutY="222.0" prefHeight="100.0" prefWidth="172.0" style="-fx-background-color: PapayaWhip;">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></TextArea>
+                              <TextArea fx:id="txt_arizaAciklama" layoutX="105.0" layoutY="337.0" prefHeight="100.0" prefWidth="172.0" style="-fx-background-color: PapayaWhip;">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></TextArea>
+                              <Button fx:id="btn_kapat" layoutX="242.0" layoutY="1.0" mnemonicParsing="false" onAction="#btn_kapat1" prefHeight="26.0" prefWidth="42.0" style="-fx-background-color: OldLace;">
+                                 <graphic>
+                                    <ImageView fitHeight="31.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../OneDrive/Masaüstü/kapat.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btn_geri" layoutX="180.0" layoutY="-1.0" mnemonicParsing="false" onAction="#btn_geri1" prefHeight="39.0" prefWidth="54.0" style="-fx-background-color: OldLace;">
+                                 <graphic>
+                                    <ImageView fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../OneDrive/Masaüstü/geri.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: OldLace;">
+                           <children>
+                              <Button fx:id="btn_guncelle" layoutX="156.0" layoutY="118.0" mnemonicParsing="false" onAction="#btn_guncelle_click" prefHeight="47.0" prefWidth="127.0" style="-fx-background-color: NavajoWhite;" text="Güncelle">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Button>
+                              <TextField fx:id="txt_arama" layoutX="23.0" layoutY="6.0" onKeyPressed="#txt_arama_keyPressed" prefHeight="26.0" prefWidth="242.0" promptText="Aranacak Metin Veya Kullanıcı" style="-fx-background-color: PapayaWhip;">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></TextField>
+                              <ImageView fitHeight="167.0" fitWidth="152.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../OneDrive/Masaüstü/güncelle.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="table_musteri" layoutX="70.0" layoutY="102.0" onMouseClicked="#table_musteri_clicked" prefHeight="649.6" prefWidth="488.0" style="-fx-background-color: OldLace;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="id" prefWidth="23.999999225139618" style="-fx-background-color: NavajoWhite;" text="id" />
+                      <TableColumn fx:id="adi" prefWidth="122.39998817443848" style="-fx-background-color: NavajoWhite;" text="Adı" />
+                        <TableColumn fx:id="soyadi" prefWidth="132.79998779296875" style="-fx-background-color: NavajoWhite;" text="Soyadi" />
+                        <TableColumn fx:id="arizaAciklama" prefWidth="173.5999755859375" style="-fx-background-color: NavajoWhite;" text="Arıza Açıklaması" />
+                        <TableColumn fx:id="alet" prefWidth="99.99996948242188" style="-fx-background-color: NavajoWhite;" text="Alet" />
+                        <TableColumn fx:id="masraf" prefWidth="59.20001220703125" style="-fx-background-color: NavajoWhite;" text="Masraf" />
+                        <TableColumn fx:id="urunBilgi" prefWidth="123.2000732421875" style="-fx-background-color: NavajoWhite;" text="Ürün Bilgi" />
+                        <TableColumn fx:id="PersonelAciklama" prefWidth="172.00006103515625" style="-fx-background-color: NavajoWhite;" text="Personel Açıklama" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

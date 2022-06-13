@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TeslimatCikisController">
+   <children>
+      <SplitPane dividerPositions="0.5" layoutX="350.0" layoutY="167.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <SplitPane dividerPositions="0.5" layoutX="122.0" layoutY="158.0" orientation="VERTICAL" prefHeight="599.2" prefWidth="546.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TableView fx:id="tablemusteri" layoutX="138.0" layoutY="63.0" onMouseClicked="#table_clicked1" prefHeight="371.2" prefWidth="620.8" style="-fx-background-color: OldLace;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="idmus" prefWidth="34.39999610185623" style="-fx-background-color: NavajoWhite;" text="id" />
+                                  <TableColumn fx:id="admus" prefWidth="111.9999885559082" style="-fx-background-color: NavajoWhite;" text="Müşteri Ad" />
+                                    <TableColumn fx:id="soymus" prefWidth="110.40003967285156" style="-fx-background-color: NavajoWhite;" text="Müşteri Soyadı" />
+                                    <TableColumn fx:id="ismus" prefWidth="143.20001220703125" style="-fx-background-color: NavajoWhite;" text="İşlem" />
+                                    <TableColumn fx:id="tesmus" prefWidth="107.199951171875" style="-fx-background-color: NavajoWhite;" text="Teslimat" />
+                                    <TableColumn fx:id="urunmus" prefWidth="114.4000244140625" style="-fx-background-color: NavajoWhite;" text="Ürün" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: OldLace;">
+                           <children>
+                              <Label layoutX="24.0" layoutY="43.0" text="MÜŞTERİ AD:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="27.0" layoutY="107.0" text="MÜŞTERİ SOYAD:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="27.0" layoutY="163.0" text="ÜRÜN:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="27.0" layoutY="218.0" text="PERSONEL ADI:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtad" layoutX="23.0" layoutY="63.0" style="-fx-background-color: PapayaWhip;" />
+                              <TextField fx:id="txtsoyad" layoutX="24.0" layoutY="127.0" style="-fx-background-color: PapayaWhip;" />
+                              <TextField fx:id="txturun" layoutX="23.0" layoutY="180.0" style="-fx-background-color: PapayaWhip;" />
+                              <TextField fx:id="txtperad" layoutX="25.0" layoutY="238.0" style="-fx-background-color: PapayaWhip;" />
+                              <Label layoutX="26.0" layoutY="11.0" text="MÜŞTERİ İD:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbl_id" layoutX="114.0" layoutY="11.0" style="-fx-background-color: PapayaWhip;" text="Label" />
+                              <Label layoutX="29.0" layoutY="322.0" text="İŞLEM:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtislem" layoutX="26.0" layoutY="340.0" style="-fx-background-color: PapayaWhip;" />
+                              <Button fx:id="btnper" layoutX="193.0" layoutY="211.0" mnemonicParsing="false" onAction="#btnper1" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: NavajoWhite;" text="Personel Bilgi">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnkaydet" layoutX="193.0" layoutY="136.0" mnemonicParsing="false" onAction="#btnkaydet1" prefHeight="42.0" prefWidth="114.0" style="-fx-background-color: NavajoWhite;" text="KAYDET">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fitHeight="325.0" fitWidth="344.0" layoutX="292.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../OneDrive/Masaüstü/teslim.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField fx:id="txt_arama" layoutX="358.0" layoutY="8.0" onAction="#txt_arama_action" onKeyPressed="#txt_arama_keyPressed" prefHeight="26.0" prefWidth="214.0" promptText="Aranacak Metin Veya Kullanıcı" style="-fx-background-color: PapayaWhip;">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="24.0" layoutY="273.0" text="PERSONEL ALANI:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtperalan" layoutX="24.0" layoutY="291.0" style="-fx-background-color: PapayaWhip;" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <SplitPane dividerPositions="0.5" layoutX="140.0" layoutY="211.0" orientation="VERTICAL" prefHeight="599.2" prefWidth="546.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <SplitPane dividerPositions="0.23772609819121443" layoutX="98.0" layoutY="82.0" prefHeight="371.2" prefWidth="620.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="282.0" style="-fx-background-color: OldLace;">
+                                       <children>
+                                          <ImageView fitHeight="174.0" fitWidth="176.0" layoutX="-20.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../OneDrive/Masaüstü/arma.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="146.0" fitWidth="136.0" layoutX="4.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../OneDrive/Masaüstü/arza2.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <SplitPane dividerPositions="0.775" layoutX="87.0" layoutY="69.0" orientation="VERTICAL" prefHeight="369.6" prefWidth="366.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <items>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <TableView fx:id="tableteslimat" layoutX="28.0" onMouseClicked="#table_clicked2" prefHeight="252.0" prefWidth="364.8" style="-fx-background-color: OldLace;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="tesid" prefWidth="36.79998630285263" style="-fx-background-color: NavajoWhite;" text="id" />
+                                                            <TableColumn fx:id="tesmusad" prefWidth="147.20001983642578" style="-fx-background-color: NavajoWhite;" text="Müşteri Ad" />
+                                                            <TableColumn fx:id="tesperad" prefWidth="155.199951171875" style="-fx-background-color: NavajoWhite;" text="Personel Ad" />
+                                                            <TableColumn fx:id="tesalet" prefWidth="124.0" style="-fx-background-color: NavajoWhite;" text="Alet" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </AnchorPane>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: OldLace;">
+                                                   <children>
+                                                      <Button fx:id="btn_kapat" layoutX="248.0" layoutY="6.0" mnemonicParsing="false" onAction="#btn_kapat1" prefHeight="67.0" prefWidth="99.0" style="-fx-background-color: OldLace;">
+                                                         <graphic>
+                                                            <ImageView fitHeight="62.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../../../OneDrive/Masaüstü/kapat.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <Button fx:id="btn_geri" layoutX="124.0" layoutY="5.0" mnemonicParsing="false" onAction="#btn_geri1" prefHeight="70.0" prefWidth="99.0" style="-fx-background-color: OldLace;">
+                                                         <graphic>
+                                                            <ImageView fitHeight="51.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../../../OneDrive/Masaüstü/geri.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <Label fx:id="lbl_idper" layoutX="14.0" layoutY="40.0" style="-fx-background-color: PapayaWhip;" text="Label" />
+                                                   </children>
+                                                </AnchorPane>
+                                            </items>
+                                          </SplitPane>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TableView fx:id="tablepersonel" layoutX="60.0" layoutY="36.0" onMouseClicked="#table_clicked3" prefHeight="371.2" prefWidth="620.8" style="-fx-background-color: OldLace;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="perid" prefWidth="44.00000077486038" style="-fx-background-color: NavajoWhite;" text="id" />
+                                  <TableColumn fx:id="perad" prefWidth="205.59997177124023" style="-fx-background-color: NavajoWhite;" text="Personel Adı" />
+                                    <TableColumn fx:id="peradres" prefWidth="128.8000030517578" style="-fx-background-color: NavajoWhite;" text="Adres" />
+                                    <TableColumn fx:id="peralan" prefWidth="139.199951171875" style="-fx-background-color: NavajoWhite;" text="Alan" />
+                                    <TableColumn prefWidth="100.7999389648437" style="-fx-background-color: NavajoWhite;" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
